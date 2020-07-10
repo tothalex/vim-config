@@ -1,0 +1,48 @@
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'preservim/NERDTree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'townk/vim-autoclose'
+call plug#end()
+
+" general
+set encoding=UTF-8
+set relativenumber
+syntax enable
+set background=dark
+colorscheme gruvbox
+
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
+" coc settings
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" tab settings
+set smarttab
+set cindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" always center on movement
+nnoremap j jzz
+nnoremap k kzz
+nnoremap <Down> jzz
+nnoremap <Up> kzz
+
+" nerdtree settings
+autocmd vimenter * NERDTree
+let g:NERDTreeIgnore = ['^node_modules$']
+map <c-e> :NERDTreeToggle<CR>
+
+" fzf settings
+map <c-o> :GFiles --exclude-standard --others --cached<CR>
