@@ -49,5 +49,6 @@ map <c-e> :NERDTreeToggle<CR>
 map <c-o> :GFiles --exclude-standard --others --cached<CR>
 map <c-f> :Rg! 
 map <c-h> :BCommits<CR>
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --theme=gruvbox --color=always --style=header,grid --line-range :300 {}'"
+
