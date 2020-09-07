@@ -10,7 +10,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'townk/vim-autoclose'
+Plug 'chemzqm/vim-jsx-improve'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 " general
@@ -41,8 +42,12 @@ nnoremap <Up> kzz
 
 " nerdtree settings
 autocmd vimenter * NERDTree
-let g:NERDTreeIgnore = ['^node_modules$']
+" let g:NERDTreeIgnore = ['^node_modules$']
 map <c-e> :NERDTreeToggle<CR>
 
 " fzf settings
 map <c-o> :GFiles --exclude-standard --others --cached<CR>
+map <c-f> :Rg! 
+map <c-h> :BCommits<CR>
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --theme=gruvbox --color=always --style=header,grid --line-range :300 {}'"
