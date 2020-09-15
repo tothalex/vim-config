@@ -55,3 +55,6 @@ let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --ma
 " file navigation
 map <c-p> :bprev<CR>
 map <c-n> :bnext<CR>
+
+" registers
+map <c-r> :reg<CR>
