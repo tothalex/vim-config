@@ -52,3 +52,6 @@ map <c-h> :BCommits<CR>
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --theme=gruvbox --color=always --style=header,grid --line-range :300 {}'"
 
+" file navigation
+map <c-p> :bprev<CR>
+map <c-n> :bnext<CR>
