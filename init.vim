@@ -58,3 +58,6 @@ map <c-n> :bnext<CR>
 
 " registers
 map <c-r> :reg<CR>
+
+" buffers
+map <c-b> :Buffers<CR>
