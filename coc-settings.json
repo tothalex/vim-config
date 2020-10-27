@@ -4,5 +4,5 @@
   "coc.preferences.formatOnType": true,
   "vetur.format.defaultFormatter.html": "prettier",
   "eslint.filetypes": ["typescript", "javascript", "typescriptreact", "vue"],
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact", "vue"]
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact", "vue", "rust"]
 }
