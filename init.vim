@@ -62,9 +62,13 @@ map <c-r> :reg<CR>
 " buffers
 map <c-b> :Buffers<CR>
 
-" split navigation remap
+" split remaps
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-q> <C-W>q
+
+"split resize
+map <C-d> :vertical resize -1<cr>
+map <C-i> :vertical resize +1<cr>
