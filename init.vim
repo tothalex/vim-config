@@ -44,6 +44,12 @@ nnoremap <Up> kzz
 autocmd vimenter * NERDTree
 " let g:NERDTreeIgnore = ['^node_modules$']
 map <c-e> :NERDTreeToggle<CR>
+function! s:updateNerdTreeDir()
+  if exists("g:NERDTree") && g:NERDTree.IsOpen() 
+    exec ":NERDTreeFind"
+  endif
+endfunction
+autocmd BufWinEnter * call s:updateNerdTreeDir()
 
 " fzf settings
 map <c-o> :GFiles --exclude-standard --others --cached<CR>
@@ -53,8 +59,8 @@ let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --theme=gruvbox --color=always --style=header,grid --line-range :300 {}'"
 
 " file navigation
-map <c-p> :bprev<CR>
-map <c-n> :bnext<CR>
+map <c-p> :bprev<CR>call s:updateNerdTreeDir()<CR>
+map <c-n> :bnext<CR>call s:updateNerdTreeDir()<CR>
 
 " registers
 map <c-r> :reg<CR>
