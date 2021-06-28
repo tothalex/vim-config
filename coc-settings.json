@@ -2,7 +2,8 @@
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
   "coc.preferences.formatOnType": true,
+  "eslint.autoFixOnSave": true,
   "vetur.format.defaultFormatter.html": "prettier",
-  "eslint.filetypes": ["typescript", "javascript", "typescriptreact", "vue"],
+  "eslint.probe": ["typescript", "javascript", "typescriptreact", "vue"],
   "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact", "vue", "rust"]
 }
