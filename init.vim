@@ -21,7 +21,7 @@ call plug#end()
 
 " general
 set encoding=UTF-8
-set relativenumber
+set number relativenumber
 syntax enable
 set background=dark
 colorscheme gruvbox
