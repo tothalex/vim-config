@@ -67,6 +67,11 @@ nnoremap <silent> ;g  :LazyGit<CR>
 " nnn
 nnoremap  <silent> ;n :NnnPicker %:p:h<CR>
 
+" tabs
 :nnoremap <C-n> :TablineBufferNext<CR>
 :nnoremap <C-p> :TablineBufferPrev<CR>
 :nnoremap <silent> ;x :bp<bar>sp<bar>bn<bar>bd<CR><CR>
+
+" search for selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
