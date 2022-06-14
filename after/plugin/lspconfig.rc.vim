@@ -38,6 +38,7 @@ local on_attach = function(client, bufnr)
         vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
 end
+-- typescript
 lspconfig.tsserver.setup({
     on_attach = function(client, bufnr)
         client.resolved_capabilities.document_formatting = false
@@ -45,7 +46,6 @@ lspconfig.tsserver.setup({
         on_attach(client, bufnr)
     end,
 })
-
 null_ls.setup({
     sources = {
         null_ls.builtins.diagnostics.eslint,
@@ -54,6 +54,9 @@ null_ls.setup({
     },
     on_attach = on_attach,
 })
+
+-- terraform
+lspconfig.terraformls.setup{} 
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
