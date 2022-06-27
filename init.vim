@@ -8,8 +8,7 @@ set number relativenumber
 syntax enable
 set background=dark
 colorscheme nightfox
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+set termguicolors
 set cursorline
 set title
 set autoindent

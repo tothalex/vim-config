@@ -64,9 +64,6 @@ nnoremap <silent> \\ <cmd>Telescope buffers<cr>
 " lazygit
 nnoremap <silent> ;g  :LazyGit<CR>
 
-" nnn
-nnoremap  <silent> ;n :NnnPicker %:p:h<CR>
-
 " tabs
 :nnoremap <C-n> :TablineBufferNext<CR>
 :nnoremap <C-p> :TablineBufferPrev<CR>
