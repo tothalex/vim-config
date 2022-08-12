@@ -2,13 +2,14 @@
 runtime ./plug.vim
 runtime ./map.vim
 
+" color schema
+colorscheme ayu
+set termguicolors
+
 " general
 set encoding=UTF-8
 set number relativenumber
 syntax enable
-set background=dark
-colorscheme nightfox
-set termguicolors
 set cursorline
 set title
 set autoindent
@@ -23,11 +24,10 @@ set expandtab
 set nosc noru nosm
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
-"set showmatch
-" How many tenths of a second to blink when matching brackets
-"set mat=2
+
 " Ignore case when searching
 set ignorecase
+
 " indents
 filetype plugin indent on
 set shiftwidth=2
@@ -53,6 +53,8 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
+" go format
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
 
 " copy to clipboard

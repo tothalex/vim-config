@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 " color theme
-Plug 'EdenEast/nightfox.nvim'
+Plug 'ayu-theme/ayu-vim'
+
 
 " git related plugins
 Plug 'tpope/vim-fugitive'
@@ -11,6 +12,9 @@ Plug 'wincent/terminus'
 
 " terraform
 Plug 'hashivim/vim-terraform'
+
+" graphql
+Plug 'jparise/vim-graphql'
 
 if has('nvim')
   " lsp
