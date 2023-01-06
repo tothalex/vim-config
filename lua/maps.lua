@@ -30,3 +30,6 @@ keymap.set('n', '<C-r>', ':registers<CR>', { noremap = true, silent = true })
 
 -- noh
 keymap.set('n', '<C-c>', ':noh<CR>', { noremap = true, silent = true })
+
+-- nodiff
+keymap.set('n', '<C-c>', ':DiffviewClose<CR>', { noremap = true, silent = true })
