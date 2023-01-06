@@ -54,7 +54,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
@@ -95,33 +95,23 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 require'lspconfig'.terraformls.setup{}
-vim.api.nvim_create_autocmd({"BufWritePre"}, {
-  pattern = {"*.tf", "*.tfvars"},
-  callback = vim.lsp.buf.formatting_sync,
-})
+--vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  --pattern = {"*.tf", "*.tfvars"},
+  --callback = vim.lsp.buf.formatting_sync,
+--})
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "" },
-  severity_sort = true,
-}
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "" },
+    severity_sort = true,
+    signs = false
+  }
 )
 
--- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = "", Warn = "", Hint = "", Info = "" }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
-
-vim.diagnostic.config({
-  virtual_text = {
-    prefix = ''
-  },
-  update_in_insert = true,
-  float = {
-    source = "always", -- Or "if_many"
-  },
-})
+vim.diagnostic.config {
+  virtual_text = false,
+  signs = false,
+  underline = false,
+}
