@@ -72,7 +72,12 @@ nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      completion = { eanble = true, showWord = "Disable" }
+    }
+  }
 }
 
 nvim_lsp.sourcekit.setup {
@@ -88,6 +93,8 @@ nvim_lsp.sumneko_lua.setup {
   end,
   settings = {
     Lua = {
+      completion = { eanble = true, showWord = "Disable" },
+
       diagnostics = {
         -- Get the language server to recognize the `vim` global
         globals = { 'vim' },
@@ -100,6 +107,24 @@ nvim_lsp.sumneko_lua.setup {
       },
     },
   },
+}
+
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      completion = { eanble = true, showWord = "Disable" }
+    }
+  }
+}
+
+require 'lspconfig'.terraformls.setup {
+  settings = {
+    Lua = {
+      completion = { eanble = true, showWord = "Disable" }
+    }
+  }
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
