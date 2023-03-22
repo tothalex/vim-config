@@ -9,6 +9,9 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- color schema
+  use 'ayu-theme/ayu-vim'
+
   use 'nvim-lua/plenary.nvim' -- Common utilities
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -40,9 +43,6 @@ packer.startup(function(use)
 
   use 'norcalli/nvim-colorizer.lua'
 
-  -- color schema
-  use 'ayu-theme/ayu-vim'
-
   use {
     'phaazon/hop.nvim',
     branch = 'v2'
@@ -66,12 +66,16 @@ packer.startup(function(use)
 
   use 'kdheepak/lazygit.nvim'
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  })
 
   use 'tpope/vim-fugitive'
 
   -- git diffview
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
+  use 'folke/zen-mode.nvim'
 end)
