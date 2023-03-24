@@ -1,5 +1,3 @@
 local keymap = vim.keymap
-keymap.set('n', ';gg', ':LazyGit <CR>')
-keymap.set('n', ';gm', ':LazyGitFilter <CR>')
-keymap.set('n', ';gf', ':LazyGitFilterCurrentFile <CR>')
-
+keymap.set('n', ';g', ':LazyGit <CR>')
+keymap.set('n', ';c', ':LazyGitFilter <CR>')

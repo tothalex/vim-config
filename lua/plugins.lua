@@ -77,5 +77,8 @@ packer.startup(function(use)
 
   -- git diffview
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
   use 'folke/zen-mode.nvim'
+
+  use 'lewis6991/gitsigns.nvim'
 end)
