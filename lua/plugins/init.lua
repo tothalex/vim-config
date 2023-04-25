@@ -57,5 +57,12 @@ require("lazy").setup({
   },
 
   -- navigation in text
-  "phaazon/hop.nvim"
+  "phaazon/hop.nvim",
+
+  -- lsp navigation
+  "glepnir/lspsaga.nvim",
+  "lewis6991/gitsigns.nvim",
+
+  -- terraform
+  "hashivim/vim-terraform"
 })

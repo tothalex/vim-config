@@ -98,7 +98,7 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   settings = {
     Lua = {
-      completion = { eanble = true, showWord = "Disable" }
+      completion = { enable = true, showWord = "Disable" }
     }
   }
 }
@@ -113,7 +113,7 @@ nvim_lsp.tailwindcss.setup {
   capabilities = capabilities,
   settings = {
     Lua = {
-      completion = { eanble = true, showWord = "Disable" }
+      completion = { enable = true, showWord = "Disable" }
     }
   }
 }
@@ -121,7 +121,7 @@ nvim_lsp.tailwindcss.setup {
 nvim_lsp.terraformls.setup {
   settings = {
     Lua = {
-      completion = { eanble = true, showWord = "Disable" }
+      completion = { enable = true, showWord = "Disable" }
     }
   }
 }

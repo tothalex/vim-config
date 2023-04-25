@@ -1,6 +1,7 @@
 require('core.base')
 require('core.highlights')
 require('core.maps')
+require('core.cmd')
 require('plugins.init')
 
 -- plugin configs
@@ -15,3 +16,4 @@ require('plugins.config.ui')
 require('plugins.config.nnn')
 require('plugins.config.tree')
 require('plugins.config.hop')
+require('plugins.config.lspsaga')
