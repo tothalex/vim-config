@@ -45,7 +45,6 @@ require("lazy").setup({
   -- file navigation
   "nvim-telescope/telescope.nvim",
   "mcchrish/nnn.vim",
-  "nvim-tree/nvim-tree.lua",
 
   -- ui
   "kdheepak/tabline.nvim",
@@ -64,5 +63,8 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
 
   -- terraform
-  "hashivim/vim-terraform"
+  "hashivim/vim-terraform",
+
+  --rust
+  "simrat39/rust-tools.nvim"
 })

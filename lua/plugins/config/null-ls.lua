@@ -19,7 +19,8 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    null_ls.builtins.formatting.terraform_fmt
+    null_ls.builtins.formatting.terraform_fmt,
+    null_ls.builtins.formatting.rustfmt,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
