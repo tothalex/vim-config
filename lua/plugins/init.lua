@@ -58,6 +58,9 @@ require("lazy").setup({
   -- navigation in text
   "phaazon/hop.nvim",
 
+  -- navigation in tmux
+  "christoomey/vim-tmux-navigator",
+
   -- lsp navigation
   "glepnir/lspsaga.nvim",
   "lewis6991/gitsigns.nvim",

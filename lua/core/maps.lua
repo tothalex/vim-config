@@ -25,4 +25,3 @@ keymap.set('n', 'sw', ':w<CR>', { silent = true })
 
 -- close buffer
 keymap.set('n', ';x', ':bp<bar>sp<bar>bn<bar>bd<CR><CR>', { noremap = true, silent = true })
-

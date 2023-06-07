@@ -1,3 +1,7 @@
+local custom_onedark = require 'lualine.themes.onedark_dark'
+custom_onedark.normal.c.bg = '#000000'
+
+
 require 'tabline'.setup {
   -- Defaults configuration options
   enable = true,
@@ -35,7 +39,7 @@ lualine.setup {
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = {},
-    theme = 'onedark_dark'
+    theme = custom_onedark
   },
   sections = {
     lualine_a = { 'mode' },
