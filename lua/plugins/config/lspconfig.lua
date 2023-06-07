@@ -4,6 +4,33 @@ if (not status) then return end
 local protocol = require('vim.lsp.protocol')
 local util = require "lspconfig/util"
 
+protocol.CompletionItemKind = {
+  '󰉿', -- Text
+  '󰆧', -- Method
+  '󰊕', -- Function
+  '', -- Constructor
+  '󰜢', -- Field
+  '󰀫', -- Variable
+  '󰠱', -- Class
+  '', -- Interface
+  '', -- Module
+  '󰜢', -- Property
+  '󰑭', -- Unit
+  '󰎠', -- Value
+  '', -- Enum
+  '󰌋', -- Keyword
+  '', -- Snippet
+  '󰏘', -- Color
+  '󰈙', -- File
+  '󰈇', -- Reference
+  '󰉋', -- Folder
+  '', -- EnumMember
+  '󰏿', -- Constant
+  '󰙅', -- Struct
+  '', -- Event
+  '󰆕', -- Operator
+  '',  -- TypeParameter
+}
 
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local enable_format_on_save = function(_, bufnr)
@@ -33,34 +60,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'E', '<Cmd>lua vim.diagnostic.open_float(nil, { focusable = true })<CR>', opts)
   buf_set_keymap('n', 'sf', '<Cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
 end
-
-protocol.CompletionItemKind = {
-  '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
-  '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
-  '', -- Property
-  '', -- Unit
-  '', -- Value
-  '', -- Enum
-  '', -- Keyword
-  '﬌', -- Snippet
-  '', -- Color
-  '', -- File
-  '', -- Reference
-  '', -- Folder
-  '', -- EnumMember
-  '', -- Constant
-  '', -- Struct
-  '', -- Event
-  'ﬦ', -- Operator
-  '', -- TypeParameter
-}
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -167,5 +166,6 @@ vim.diagnostic.config({
   update_in_insert = true,
   float = {
     source = "always", -- Or "if_many"
+    border = "rounded"
   },
 })

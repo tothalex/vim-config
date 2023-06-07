@@ -3,9 +3,16 @@ if (not status) then return end
 
 saga.setup({
   ui = {
-    winblend = 10,
-    border = "shadow",
+    title = true,
+    border = "rounded",
+    winblend = 0,
+    expand = "",
+    collapse = "",
     code_action = "",
+    incoming = "",
+    outgoing = "",
+    hover = ' ',
+    kind = {},
   },
   symbol_in_winbar = {
     enable = false,

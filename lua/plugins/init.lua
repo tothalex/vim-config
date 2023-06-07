@@ -47,6 +47,7 @@ require("lazy").setup({
   "mcchrish/nnn.vim",
 
   -- ui
+  "nvim-tree/nvim-web-devicons",
   "kdheepak/tabline.nvim",
   "norcalli/nvim-colorizer.lua",
   "nvim-lualine/lualine.nvim",

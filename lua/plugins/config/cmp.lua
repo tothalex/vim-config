@@ -3,6 +3,16 @@ if (not status) then return end
 local lspkind = require 'lspkind'
 
 cmp.setup({
+  window = {
+    completion = {
+      border = "rounded",
+      winhighlight = "Normal:CmpNormal",
+    },
+    documentation = {
+      border = "rounded",
+      winhighlight = "Normal:CmpDocNormal",
+    }
+  },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
