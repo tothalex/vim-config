@@ -11,7 +11,6 @@ vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
@@ -26,6 +25,7 @@ vim.opt.wrap = false         -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.laststatus = 3
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {

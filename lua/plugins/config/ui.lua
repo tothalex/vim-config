@@ -39,7 +39,8 @@ lualine.setup {
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = {},
-    theme = custom_onedark
+    theme = custom_onedark,
+    globalstatus = true,
   },
   sections = {
     lualine_a = { 'mode' },
